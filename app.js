@@ -53,7 +53,10 @@ const clickHandler = (e) => {
   }
 
   quizIndex++;
-
+  function scroll_to_top(){
+	window.scroll({top: 0, behavior: 'smooth'});
+  };
+  
   if(quizIndex < quizLength){
     // 問題数がまだあればこちらを実行
     setupQuiz();
