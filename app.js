@@ -53,13 +53,11 @@ const clickHandler = (e) => {
   }
 
   quizIndex++;
-  function scroll_to_top(){
-	window.scroll({top: 0, behavior: 'smooth'});
-  };
-  
+
   if(quizIndex < quizLength){
     // 問題数がまだあればこちらを実行
     setupQuiz();
+    window.scroll({top:0, behavior: 'smooth'});
   } else {
     // 問題数がもうなければこちらを実行
     window.alert('勝ったッ！第4部完！正解数' + score + ' / ' + quizLength + '！もっと岸辺露伴先生の生き方を知りたい方はこちら')
